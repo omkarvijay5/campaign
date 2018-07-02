@@ -7,7 +7,6 @@ from __future__ import unicode_literals
 from django.shortcuts import render
 from django.views.generic import View
 from django.views.generic.edit import CreateView
-from django.core.urlresolvers import reverse
 
 
 # third party imports
