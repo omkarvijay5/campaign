@@ -20,6 +20,8 @@ class Contact(models.Model):
     phone_number: contact number of the person
     """
 
+    name = models.CharField(max_length=70)
+
     email = models.EmailField(max_length=70, unique=True)
 
     phone_number = models.CharField(validators=[phone_regex], max_length=17, blank=True)

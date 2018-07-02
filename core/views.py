@@ -6,8 +6,12 @@ from __future__ import unicode_literals
 # django imports
 from django.shortcuts import render
 from django.views.generic import View
+from django.views.generic.edit import CreateView
+from django.core.urlresolvers import reverse
+
 
 # third party imports
+from core.forms import ContactForm
 
 
 class Dashboard(View):
@@ -19,3 +23,12 @@ class Dashboard(View):
 
     def get(self, request, *args, **kwargs):
         return render(request, self.template_name, {})
+
+
+class ContactView(CreateView):
+    """
+    Create contact
+    """
+    form_class = ContactForm
+    template_name = 'core/contact_new.html'
+    success_url = '/'
