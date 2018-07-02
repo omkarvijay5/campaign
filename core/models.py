@@ -26,6 +26,9 @@ class Contact(models.Model):
 
     phone_number = models.CharField(validators=[phone_regex], max_length=17, blank=True)
 
+    def __unicode__(self):
+        return self.name
+
 
 class Campaign(models.Model):
     """

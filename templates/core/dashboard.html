@@ -4,8 +4,9 @@
 {% block content %}
     <h2 class="text-center">Welcome to Callhub.</h2>
     <h3 class="text-center">Create a campaign below</h3>
-    <!--<form method="post" action="." >{% csrf_token %}-->
-        <!--{{ form.as_p }}-->
-        <!--<button type="submit" class="btn btn-primary">Submit</button>-->
-    <!--</form>-->
+    <form method="post" action="." >{% csrf_token %}
+        {{ user_form.as_p }}
+        {{ campaign_form.as_p }}
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
 {% endblock content %}
